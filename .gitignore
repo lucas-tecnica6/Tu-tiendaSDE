@@ -3,3 +3,6 @@
 ################################################################################
 
 /TuTiendaSDE/bin
+/.vs/TuTiendaSDE
+/packages
+/TuTiendaSDE/obj/Debug
