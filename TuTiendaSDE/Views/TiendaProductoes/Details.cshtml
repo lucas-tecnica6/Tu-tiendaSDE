@@ -1,0 +1,41 @@
+﻿@model TuTiendaSDE.Models.TiendaProducto
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<h2>Detalles de TiendaProducto</h2>
+
+<div>
+    <h4>TiendaProducto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Producto.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Producto.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tienda.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tienda.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponibilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disponibilidad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.TiendaID }) |
+    @Html.ActionLink("Volver a la lista", "Index")</p>

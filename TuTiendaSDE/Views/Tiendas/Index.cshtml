@@ -1,0 +1,57 @@
+﻿@model IEnumerable<TuTiendaSDE.Models.Tienda>
+
+@{
+    ViewBag.Title = "Tiendas";
+}
+
+<h2>Tiendas</h2>
+
+<p>
+    @Html.ActionLink("Crear tienda", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HorarioDesde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HorarioHasta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorarioDesde)    
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HorarioHasta)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.TiendaID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Detalles", "Details", new { id = item.TiendaID }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.TiendaID }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
