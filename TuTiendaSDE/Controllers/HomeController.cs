@@ -10,7 +10,7 @@ namespace TuTiendaSDE.Controllers
 	{
 		public ActionResult Index()
 		{
-			ViewBag.Title = "pps 2019";
+			ViewBag.Title = "pps 2019 xd";
 
 			return View();
 		}
